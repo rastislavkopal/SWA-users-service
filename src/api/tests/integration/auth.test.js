@@ -40,16 +40,6 @@ describe('Authentication API', () => {
         .toDate(),
     };
 
-    resetToken = {
-      resetToken:
-        '5947397b323ae82d8c3a333b.c69d0435e62c9f4953af912442a3d064e20291f0d228c0552ed4be473e7d191ba40b18c2c47e8b9d',
-      userId: '5947397b323ae82d8c3a333b',
-      userEmail: dbUser.email,
-      expires: moment()
-        .add(2, 'hours')
-        .toDate(),
-    };
-
     expiredRefreshToken = {
       token:
         '5947397b323ae82d8c3a333b.c69d0435e62c9f4953af912442a3d064e20291f0d228c0552ed4be473e7d191ba40b18c2c47e8b9d',
@@ -57,16 +47,6 @@ describe('Authentication API', () => {
       userEmail: dbUser.email,
       expires: moment()
         .subtract(1, 'day')
-        .toDate(),
-    };
-
-    expiredResetToken = {
-      resetToken:
-        '5947397b323ae82d8c3a333b.c69d0435e62c9f4953af912442a3d064e20291f0d228c0552ed4be473e7d191ba40b18c2c47e8b9d',
-      userId: '5947397b323ae82d8c3a333b',
-      userEmail: dbUser.email,
-      expires: moment()
-        .subtract(2, 'hours')
         .toDate(),
     };
 
